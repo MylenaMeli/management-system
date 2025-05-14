@@ -1,0 +1,90 @@
+<div class="app-content-header" >
+  <!--begin::Container-->
+  <div class="container-fluid">
+    <!--begin::Row-->
+
+    <!--end::Row-->
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      <div class="card mb-4">
+        <div class="card-header d-flex align-items-center">
+          <h3 class="card-title mb-0">Gestion des approvisionnements</h3>
+          <button class="btn btn-primary ms-auto">Ajouter une commande</button>
+        </div>
+  
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th style="width: 10px">#</th>
+                <th>Fournisseur</th>
+                <th>Produit</th>
+                <th>Date de commande</th>
+                <th>Quantité</th>
+                <th>Coût unitaire (FCFA)</th>
+                <th>Coût total (FCFA)</th>
+                <th>Statut</th>
+                <th>Facture</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="align-middle">
+                <td>1</td>
+                <td>Fournisseur ABC</td>
+                <td>Bouteilles d’eau</td>
+                <td>2025-04-10</td>
+                <td>50</td>
+                <td>200</td>
+                <td>10 000</td>
+                <td><span class="badge bg-warning text-dark">En cours</span></td>
+                <td><a href="#" class="btn btn-sm btn-secondary">Voir facture</a></td>
+                <td>
+                  <button class="btn btn-sm btn-warning me-1">
+                    <i class="bi bi-pencil-square"></i> Modifier
+                  </button>
+                  <button class="btn btn-sm btn-danger">
+                    <i class="bi bi-trash"></i> Supprimer
+                  </button>
+                </td>
+              </tr>
+  
+              <tr class="align-middle">
+                <td>2</td>
+                <td>Distributeur XYZ</td>
+                <td>Cartons de jus</td>
+                <td>2025-04-09</td>
+                <td>30</td>
+                <td>500</td>
+                <td>15 000</td>
+                <td><span class="badge bg-success">Livré</span></td>
+                <td><a href="#" class="btn btn-sm btn-secondary">Voir facture</a></td>
+                <td>
+                  <button class="btn btn-sm btn-warning me-1">
+                    <i class="bi bi-pencil-square"></i> Modifier
+                  </button>
+                  <button class="btn btn-sm btn-danger">
+                    <i class="bi bi-trash"></i> Supprimer
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <div class="card-footer clearfix">
+          <ul class="pagination pagination-sm m-0 float-end">
+            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--end::Container-->
+</div>

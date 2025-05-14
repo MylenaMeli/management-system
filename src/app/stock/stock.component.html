@@ -1,0 +1,74 @@
+<div class="app-content-header" >
+  <!--begin::Container-->
+  <div class="container-fluid">
+    <!--begin::Row-->
+
+    <!--end::Row-->
+  </div>
+  <div class="row">
+      <div class="col-md-12 col-xs-12 col-sm-12">
+        <div class="card mb-4">
+          <div class="card-header d-flex align-items-center">
+              <h3 class="card-title mb-0">Gestion des stocks</h3>
+              <a href="/admin/add-stock" class="btn btn-primary ms-auto">Ajouter un stock</a>
+              <button class="btn btn-primary ms-auto">imprimer</button>
+            </div>
+            
+          <!-- /.card-header -->
+          <div class="card-body" >
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th style="width: 10px">#</th>
+                  <th>produit</th>
+                  <th>Date de d'entree</th>
+                  <th>quantite</th>
+                  <th>nombre de cartons</th>
+                  <th >total</th>
+                  <th >actions</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="align-middle" *ngFor="let product of products; let i = index">
+                  
+                  <td>{{ i + 1 }}</td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.createdAt}}</td>
+                  <td>{{product.quantite}}</td>
+                  <td>{{product.cartons}}</td>
+                  <td>{{product.total}}</td>
+               
+                  <td>
+                      <button class="btn btn-sm btn-warning me-1">
+                        <i class="bi bi-edit"></i> Éditer
+                      </button>
+                      <button class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash-alt"></i> Supprimer
+                      </button>
+                    </td>
+                    
+                </tr>
+            
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer clearfix">
+            <ul class="pagination pagination-sm m-0 float-end">
+              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+   
+      </div>
+      <!-- /.col -->
+
+      <!-- /.col -->
+    </div>
+  <!--end::Container-->
+</div>

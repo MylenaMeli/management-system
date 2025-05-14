@@ -1,0 +1,24 @@
+<div class="container flex">
+  <div class="facebook-page flex">
+    <div class="text">
+      <h1>SGS-SOL</h1>
+      <i>Système de gestion de stock - Solkamtech</i>
+    </div>
+
+    <form (submit)="onLogin(); $event.preventDefault()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email or phone number" required>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+
+      <div class="link">
+        <button type="submit" class="login">Login</button>
+        <a href="#" class="forgot">Forgot password?</a>
+      </div>
+
+      <hr>
+    </form>
+  </div>
+</div>
