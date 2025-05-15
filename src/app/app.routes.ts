@@ -4,7 +4,7 @@ import { UserComponent } from './user/user.component';
 import { StockComponent } from './stock/stock.component';
 import { LoginComponent } from './login/login.component';
 import { BoardComponent } from './board/board.component';
-import { VenteComponent } from './vente/vente.component';
+import { OutputComponent } from './output/output.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { EntreeComponent } from './entree/entree.component';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
@@ -17,7 +17,7 @@ export const routes: Routes = [
         component: BoardComponent,
         children: [
           {path:'user', component:UserComponent },
-          {path:'sortie', component:VenteComponent },
+          {path:'sortie', component:OutputComponent },
           { path: 'stock', component: StockComponent },
           { path: 'historique', component: HistoriqueComponent },
           { path: 'entree', component: EntreeComponent },

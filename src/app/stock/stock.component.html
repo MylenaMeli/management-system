@@ -11,21 +11,21 @@
           <div class="card-header d-flex align-items-center">
               <h3 class="card-title mb-0">Gestion des stocks</h3>
               <a href="/admin/add-stock" class="btn btn-primary ms-auto">Ajouter un stock</a>
-              <button class="btn btn-primary ms-auto">imprimer</button>
+              <button class="btn btn-primary ms-auto"  (click)="printDiv()">imprimer</button>
             </div>
             
           <!-- /.card-header -->
-          <div class="card-body" >
+          <div class="card-body" #printSection id="print-section" >
             <table class="table table-bordered">
               <thead>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>produit</th>
-                  <th>Date de d'entree</th>
-                  <th>quantite</th>
-                  <th>nombre de cartons</th>
-                  <th >total</th>
-                  <th >actions</th>
+                  <th>Produit</th>
+                  <th>Date de d'entrée</th>
+                  <th>Quantité</th>
+                  <th>Nombre de cartons</th>
+                  <th >Total</th>
+                  <th >Actions</th>
 
                 </tr>
               </thead>
@@ -34,16 +34,18 @@
                   
                   <td>{{ i + 1 }}</td>
                   <td>{{product.name}}</td>
-                  <td>{{product.createdAt}}</td>
+                  <td>{{ product.createdAt | date: 'dd/MM/yyyy à HH:mm' }}</td>
                   <td>{{product.quantite}}</td>
                   <td>{{product.cartons}}</td>
-                  <td>{{product.total}}</td>
+                 <td>{{product.total}}</td>
+                 
+
                
                   <td>
                       <button class="btn btn-sm btn-warning me-1">
                         <i class="bi bi-edit"></i> Éditer
                       </button>
-                      <button class="btn btn-sm btn-danger">
+                      <button class="btn btn-sm btn-danger"  (click)="deleteProduct(product.id)">
                         <i class="bi bi-trash-alt"></i> Supprimer
                       </button>
                     </td>
